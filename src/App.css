@@ -1,0 +1,188 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.encabezado-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.logo-sitio {
+    height: 60px;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #0062c4;
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.festividades-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1; 
+}
+
+.tarjeta-festividad {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-festividad:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-festividad {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.tarjeta-festividad h2 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-weight: 700;
+    width: 100%;
+}
+
+.tarjeta-festividad p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.detalles-vista {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+    animation: fadeIn 0.5s ease-out;
+    text-align: justify;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tarjeta-festividad button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.tarjeta-festividad button:hover {
+    background-color: #009acd;
+    transform: translateY(-2px);
+}
+
+.boton-favorito {
+    background-color: #00bfff;
+    color: #fff;
+}
+
+.boton-favorito.es-favorita {
+    background-color: #6a8ba7;
+    color: white;
+}
+
+.boton-favorito:hover {
+    background-color: #009acd;
+}
+
+.boton-favorito.es-favorita:hover {
+    background-color: #5c7b96;
+}
+
+.contador-clics {
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-sitio {
+    background-color: #0062c4;
+    color: #ecf0f1; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; 
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .encabezado-principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-sitio {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .festividades-contenedor {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .tarjeta-festividad {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
